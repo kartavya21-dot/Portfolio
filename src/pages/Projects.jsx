@@ -39,8 +39,7 @@ const Project = () => {
         "A responsive and animated portfolio website built for a client, focusing on smooth user experience, clean design, and modern UI interactions.",
       tech: ["React", "Framer Motion", "TailwindCSS"],
       live: "https://www.chetancreativemind.com/",
-      github:
-        "https://github.com/kartavya21-dot/chetan_creative_mind_frontent",
+      github: "https://github.com/kartavya21-dot/chetan_creative_mind_frontent",
       images: [ccv_mobile2, ccv_mobile, ccv_pc],
     },
   ];
@@ -82,7 +81,7 @@ const Project = () => {
                 <motion.img
                   initial={{ opacity: 0, x: isOdd ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: false, amount: 0. }}
+                  viewport={{ once: false, amount: 0 }}
                   transition={{ duration: 0.6 }}
                   className="phone-border absolute top-24 z-1 rounded-3xl w-60 transition-transform duration-900 hover:scale-120"
                   style={{ [isOdd ? "right" : "left"]: "900px" }}
@@ -157,23 +156,22 @@ const Project = () => {
                       className="transition-transform cursor-pointer duration-500 group-hover:text-black"
                       size={"2.3rem"}
                     />
-                    <p className="project-font group-hover:text-black">
-                      Visit
-                    </p>
+                    <p className="project-font group-hover:text-black">Visit</p>
                   </div>
                 </div>
               </motion.div>
             </div>
 
             {/* Mobile/Tablet Layout (below lg) */}
-            <div className="lg:hidden flex flex-col py-12 px-6 md:px-12 gap-8">
+            <div className="xl:hidden flex flex-col py-12 px-6 md:px-12 gap-8">
               {/* Project Image - Mobile/Tablet */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.6 }}
-                className="w-full flex justify-center"
+                className="w-[94dvw] flex self-center justify-center"
+                style={{ marginTop: "3dvh"}}
               >
                 <img
                   src={project.images[2]}
@@ -189,11 +187,12 @@ const Project = () => {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-white flex flex-col gap-6"
+                style={{ padding: "0.5rem 0.6rem 1rem" }}
               >
-                <h1 className="project-font text-3xl md:text-4xl font-bold">
+                <h1 className="project-font text-3xl md:text-5xl font-bold">
                   {project.title}
                 </h1>
-                <p className="project-font text-base md:text-lg leading-relaxed">
+                <p className="project-font text-base md:text-2xl leading-relaxed">
                   {project.description}
                 </p>
 
@@ -202,7 +201,8 @@ const Project = () => {
                   {project.tech.map((t, i) => (
                     <div
                       key={i}
-                      className="project-font px-4 py-2 border border-white rounded-full text-sm md:text-base"
+                      className="project-font border border-white rounded-full text-xs md:text-base"
+                      style={{ padding: "4px 8px" }}
                     >
                       {t}
                     </div>
@@ -213,19 +213,21 @@ const Project = () => {
                 <div className="flex gap-4 flex-wrap mt-4">
                   <div
                     className="group flex border items-center border-white rounded-full gap-3 px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-white"
+                    style={{ padding: "5px 8px 5px 8px" }}
                     onClick={() => sendTo(project.github)}
                   >
                     <FaGithub
                       className="transition-colors duration-300 group-hover:text-black"
                       size={"1.5rem"}
                     />
-                    <p className="project-font text-sm md:text-base group-hover:text-black">
+                    <p className="project-font text-xs md:text-base group-hover:text-black">
                       Github
                     </p>
                   </div>
                   <div
                     className="group flex border items-center border-white rounded-full gap-3 px-6 py-3 cursor-pointer transition-all duration-300 hover:bg-white"
                     onClick={() => sendTo(project.live)}
+                    style={{ padding: "5px 8px 5px 8px" }}
                   >
                     <FaGlobe
                       className="transition-colors duration-300 group-hover:text-black"
