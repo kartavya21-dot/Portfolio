@@ -64,7 +64,7 @@ const Skills = () => {
         backgroundImage: "linear-gradient(315deg, #003153 0%, #1B1B1B 74%)",
       }}
     >
-      <div className="border border-white mx-auto px-8 md:px-16 w-full flex flex-col items-center justify-center">
+      <div className="mx-auto px-8 md:px-16 w-full flex flex-col items-center justify-center">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -74,7 +74,7 @@ const Skills = () => {
           className="text-center mb-16"
           style={{ marginBottom: "4rem" }}
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-white">Skills</h2>
+          <h2 className="text-4xl md:text-7xl font-bold text-white">Skills</h2>
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "96px" }}
@@ -85,7 +85,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Skills Categories */}
-        <div className="space-y-12">
+        <div className="space-y-12" style={{marginLeft:"1.5dvw"}}>
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -97,14 +97,14 @@ const Skills = () => {
             >
               {/* Category Title */}
               <h3
-                className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-left"
-                style={{ marginBottom: "1rem" }}
+                className="text-2xl justify-self-start md:text-3xl font-semibold text-white text-center md:text-left"
+                style={{ marginBottom: "1.2dvh" }}
               >
                 {category.category}
               </h3>
 
               {/* Skills Grid */}
-              <div className="flex flex-wrap justify-center md:justify-start gap-10">
+              <div className="flex flex-wrap justify-start gap-2 md:gap-12">
                 {category.skills.map((skill, skillIndex) => {
                   const Icon = skill.icon;
                   return (
@@ -118,20 +118,17 @@ const Skills = () => {
                         delay: categoryIndex * 0.1 + skillIndex * 0.05,
                       }}
                       whileHover={{ scale: 1.05, y: -5 }}
-                      className="flex items-center gap-3 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 cursor-default"
+                      className="tag-padding flex items-center gap-3 rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 cursor-default"
                       style={{
-                        paddingLeft: "2rem",
-                        paddingRight: "2rem",
-                        paddingTop: "1.2rem",
-                        paddingBottom: "1.2rem",
+                        // padding:"1rem",
                         background: "rgba(255, 255, 255, 0.05)",
                         backdropFilter: "blur(10px)",
                         WebkitBackdropFilter: "blur(10px)",
                       }}
                     >
-                      <Icon className={`text-5xl ${skill.color}`} />
+                      <Icon className={`text-1xl md:text-3xl ${skill.color}`} />
 
-                      <span className="text-white/90 font-medium text-4xl">
+                      <span className="text-white/90 font-medium text-1xl md:text-3xl">
                         {skill.name}
                       </span>
                     </motion.div>

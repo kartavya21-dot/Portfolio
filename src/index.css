@@ -88,3 +88,7 @@
   font-weight: 500;
   font-style: normal;
 }
+
+.tag-padding {
+  padding: 0.4rem 0.7rem;
+}
