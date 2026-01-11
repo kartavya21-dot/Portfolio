@@ -38,6 +38,12 @@
   transform: translateY(-2px);
 }
 
+@media (width <= 800px) {
+  .glass-button{
+    padding: 7px 8px;
+  }
+}
+
 
 /* .glass-button-subtle {
   padding: 20px 40px;

@@ -26,7 +26,7 @@ const Hero = () => {
       </h1>
 
       {/* Subtitle */}
-      <p className="mt-6 text-lg sm:text-xl md:text-2xl lg:text-3xl max-w-3xl">
+      <p className="mt-6 text-lg relative top-1  md:top-0 sm:text-xl md:text-2xl lg:text-3xl max-w-3xl">
         Full-Stack Developer{" "}
         <span className="text-blue-800">(React • FastAPI)</span>
         <br className="hidden sm:block" />
@@ -34,7 +34,7 @@ const Hero = () => {
       </p>
 
       {/* Buttons */}
-      <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
+      <div className="relative top-5 flex flex-col sm:flex-row gap-4 sm:gap-6">
         <button
           onClick={() => scrollToSection("project")}
           className="glass-button text-base sm:text-lg md:text-xl font-semibold px-6 py-3"

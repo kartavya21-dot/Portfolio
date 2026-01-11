@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <section
         id="contact"
-      className="min-h-screen snap-start overflow-hidden py-20 flex justify-center"
+      className="h-screen snap-start overflow-hidden py-20 flex justify-center"
       style={{
         position: "relative",
         width: "100vw",
@@ -48,7 +48,7 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-white">
+          <h2 className="text-4xl md:text-7xl font-bold text-white">
             Get In Touch
           </h2>
           <motion.div
@@ -61,7 +61,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Content */}
-        <div className="grid md:grid-cols-2 gap-16 items-center" style={{padding: "10rem"}}>
+        <div className="grid md:top-0 md:grid-cols-2 justify-center items-center" style={{padding: "10rem"}}>
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -70,10 +70,10 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-white space-y-6 max-w-xl"
           >
-            <h3 className="text-3xl font-semibold">
+            <h3 className="text-xl md:text-3xl font-semibold">
               Let’s build something meaningful.
             </h3>
-            <p className="text-lg text-white/80 leading-relaxed">
+            <p className="text-sm md:text-xl text-white/80 leading-relaxed">
               I’m open to internships, entry-level roles, and collaborative
               projects. Feel free to reach out if you’d like to discuss ideas,
               opportunities, or just connect.
